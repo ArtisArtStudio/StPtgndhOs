@@ -308,11 +308,6 @@ text-decoration: none;
 display:block;
 font-size: 2vh;
 margin: auto;
-position: absolute;
-left: 50%;
-bottom: calc(-1 * var(--scratcher-bottom-gap) + 6px); /* nudge into place below the box */
-transform: translateX(-50%);
-z-index: 20;
 }
 #resetbutton:hover {
   color: #000000;
