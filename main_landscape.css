@@ -58,24 +58,22 @@ body {
 display:flexbox;
 font-weight: 400;
 flex-direction: column;
-font-size: calc(4rem + 0.8vw);
+font-size: 5rem;
 text-align: right;
 padding-right: 10px;
 } 
 
 .pagetop h3 {
-color: #000000 !important;
 font-style: normal;
-font-size: calc(1rem + 1vw);
-text-align: right;
+font-size: calc(1.5rem + 1vw);
+text-align: center;
 } 
 .pagetop h4 {
   font-family: "Roboto", sans-serif;
   display:inline;
   font-weight: 400;
-  color: #000000;
-  font-size: 3vmin;
-  text-align: right;
+  font-size: calc(0.5rem + 1vw);
+  text-align: center;
   /* position: absolute;
   right: 50%;
   transform: translateX(100%);
@@ -110,16 +108,18 @@ text-align: right;
   line-height: 1 !important;
 
 }
-/* .images{
-  max-width: 300px !important;
-}  */
+ .images{
+  max-width: 400px !important;
+ }
 #reveal {
-  float: right;
-  display: inline-table;
-  padding-right: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
   width: calc(50% - 10px);
+  float:right;
+  padding-right: 10px;
 }
-
 #scratcher-box {
   width:22em;
   align-content: left;
@@ -151,13 +151,13 @@ text-align: right;
 }
 @media (min-height: 365px) and (max-width: 671px) { 
   .pagetop h1 {
-    font-size: calc(3rem + 1.2vw);
+    font-size: calc(4rem + 1.2vw);
   }
   .pagetop h4 {
     font-size: calc(0.5rem + 0.70vw);
   }
   .pagetop h3 {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1.5rem + 1vw);
   }
   #t1
   {
@@ -174,15 +174,23 @@ text-align: right;
     left: 0%;
   }
 }
-@media (max-height: 375px){ 
+@media (max-height: 440px) { 
   .pagetop h1 {
-    font-size: calc(2rem + 3.2vw);
+    font-size: calc(4rem + 1.2vw);
   }
   .pagetop h4 {
     font-size: calc(0.5rem + 0.70vw);
   }
   .pagetop h3 {
-    font-size: calc(1rem + 1vw);
+    font-size: calc(1.7rem);
+  }
+  #t1
+  {
+    width: calc(50% - 10px);
+  }
+  #reveal {
+    width: calc(50% - 10px);
+
   }
   #scratcher-box {
     width: 20em;
@@ -190,17 +198,37 @@ text-align: right;
     top: 50%;
     left: 0%;
   }
+   
+}
+@media (max-height: 375px){ 
+  .pagetop h1 {
+    font-size: calc(4rem );
+  }
+  .pagetop h4 {
+    font-size: calc(0.8rem);
+  }
+  .pagetop h3 {
+    font-size: calc(1.4rem);
+  }
+  #scratcher-box {
+    width: 19em;
+    height: 19em;
+    top: 50%;
+    left: 0%;
+  }
   #t1
   {
     width: calc(50% - 10px);
-
   }
   #reveal {
-    width: calc(55% - 10px);
+    width: calc(50% - 10px);
 
   }
   .pagetop {
     top:0%;
+  }
+  .images{
+    max-width: 300px !important;
   }
 }
 @media (min-width: 672px) { 
@@ -215,7 +243,7 @@ text-align: right;
 }
 @media screen and (max-height:355px){ 
   .pagetop h1 {
-    font-size: calc(1.2rem + 5vw);
+    font-size: calc(4rem);
   }
   #scratcher-box {
     width: 18em;
@@ -229,21 +257,36 @@ text-align: right;
 }
 @media screen and (max-height:320px){ 
   .pagetop h1 {
-    font-size: calc(1rem + 5vw);
+    font-size: calc(3rem);
+  }
+   .pagetop h3 {
+    font-size: calc(1.3rem);
+  }
+  .pagetop h4 {
+    font-size: calc(0.7rem );
   }
   #scratcher-box {
     width: 16em;
     height: 16em;
     top: 50%;
-    left: 5%;
+    left: 1%;
   } 
-/*   .images{
+   #reveal {
+    width: calc(50% - 10px);
+  }
+   .images{
     max-width: 250px !important;
-  }  */
+  }  
 }
 @media screen and (max-height:290px){ 
   .pagetop h1 {
-    font-size: calc(1rem + 5vw);
+    font-size: calc(2rem + 5vw);
+  }
+   .pagetop h3 {
+    font-size: calc(1.2rem);
+  }
+  .pagetop h4 {
+    font-size: calc(0.6rem);
   }
   #scratcher-box {
     width: 15em;
@@ -251,10 +294,18 @@ text-align: right;
     top: 50%;
     left: 3vw;
   } 
-
-/*   .images{
+ #reveal {
+    width: calc(50% - 10px);
+  }
+   .images{
     max-width: 250px !important;
-  }  */
+  }  
+}
+/* Samsung Galaxy Z Fold (Landscape mode) */
+@media screen and (min-width: 700px) and (min-height: 700px)  and (orientation: landscape) {
+  .pagetop {
+    top: 25%;
+  }
 }
 /* @media (max-height:351px) and (min-height:319){ 
   
@@ -312,9 +363,9 @@ transition-delay: 0s;
 border-radius:1cap;
 text-align: center;
 text-decoration: none;
-display:block;
+display:inline-block;
 font-size: 2vh;
-margin: auto;
+margin: 0;
 }
 #resetbutton:hover {
   color: #000000;
